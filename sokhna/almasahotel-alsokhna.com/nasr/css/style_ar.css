@@ -1,0 +1,46 @@
+#cappa-aside{
+     right: 0;
+    left: auto !important;
+}
+*{
+    text-align: right;
+}
+#cappa-main{
+     float: left!important;
+}
+#cappa-aside .cappa-main-menu,p ,.text_right_new {
+     text-align: right !important;
+}
+.facilties .single-facility .facility-shape{
+     right: 120px !important;
+    left: auto;
+}
+.cappa-nav-toggle{
+     right: 0;
+left: auto !important;
+}
+#cappa-aside .cappa-main-menu > ul > li > a{
+     letter-spacing: 0 !important;
+}
+@media screen and (max-width: 768px) {
+    #cappa-aside {
+        transform: translateX(270px) !important;
+    }
+    body.offcanvas #cappa-aside{
+        transform: translateX(0) !important;
+    }
+    body.offcanvas #cappa-main, body.offcanvas .cappa-nav-toggle{
+        transform: translateX(-270px) !important;
+    }
+}
+.pricing-card .list li {
+     text-align: right !important;
+     padding-right: 30px!important;
+}
+
+element.style {
+}
+.pricing-card .list li i{
+     right: 0 !important;
+    left: auto !important;
+}

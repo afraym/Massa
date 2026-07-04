@@ -1,0 +1,208 @@
+		:root {
+			--gold-primary: #d4af37;
+			--gold-hover: #c5a880;
+			--gold-gradient: linear-gradient(135deg, #d4af37 0%, #aa7c11 100%);
+			--teal-accent: #0b5e75;
+			--teal-hover: #084c61;
+			--dark-obsidian: #0c0c0e;
+			--dark-card: #141418;
+			--light-cream: #faf8f5;
+			--font-heading: 'Playfair Display', serif;
+			--font-body: 'Inter', sans-serif;
+		}
+
+		body {
+			font-family: var(--font-body);
+			color: #333333;
+			background-color: var(--light-cream);
+		}
+
+		h1,
+		h2,
+		h3,
+		h4,
+		h5,
+		h6,
+		.font-heading {
+			font-family: var(--font-heading);
+		}
+
+		.bg-obsidian {
+			background-color: var(--dark-obsidian) !important;
+		}
+
+		.bg-dark-card {
+			background-color: var(--dark-card) !important;
+		}
+
+		.text-gold {
+			color: var(--gold-primary) !important;
+		}
+
+		.text-teal {
+			color: var(--teal-accent) !important;
+		}
+
+		.text-gold-gradient {
+			background: var(--gold-gradient);
+			-webkit-background-clip: text;
+			-webkit-text-fill-color: transparent;
+		}
+
+		.border-gold {
+			border: 1px solid var(--gold-primary) !important;
+		}
+
+		.border-gold-glow:hover {
+			border-color: var(--gold-primary) !important;
+			box-shadow: 0 10px 30px rgba(212, 175, 55, 0.15);
+		}
+
+		.glass-navbar {
+			background: rgba(12, 12, 14, 0.8) !important;
+			backdrop-filter: blur(20px);
+			border-bottom: 1px solid rgba(212, 175, 55, 0.2);
+		}
+
+		.glass-card {
+			background: rgba(20, 20, 24, 0.8) !important;
+			backdrop-filter: blur(15px);
+			border: 1px solid rgba(212, 175, 55, 0.2) !important;
+		}
+
+		.glass-card-light {
+			background: rgba(255, 255, 255, 0.9) !important;
+			backdrop-filter: blur(15px);
+			border: 1px solid rgba(212, 175, 55, 0.15) !important;
+		}
+
+		.btn-gold {
+			background: var(--gold-gradient) !important;
+			color: #0c0c0e !important;
+			font-weight: 700;
+			border: none;
+			transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
+			box-shadow: 0 4px 10px rgba(212, 175, 55, 0.2);
+		}
+
+		.btn-gold:hover {
+			color: #0c0c0e !important;
+			transform: translateY(-2px);
+			box-shadow: 0 8px 20px rgba(212, 175, 55, 0.4);
+		}
+
+		.btn-outline-gold {
+			border: 2.5px solid var(--gold-primary) !important;
+			color: var(--gold-primary) !important;
+			background: transparent !important;
+			font-weight: 700;
+			transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
+		}
+
+		.btn-outline-gold:hover {
+			background: var(--gold-gradient) !important;
+			color: #0c0c0e !important;
+			border-color: transparent !important;
+			transform: translateY(-2px);
+			box-shadow: 0 8px 20px rgba(212, 175, 55, 0.3);
+		}
+
+		.hero-container {
+			background-image: linear-gradient(rgba(12, 12, 14, 0.65), rgba(12, 12, 14, 0.85)), url('/assets/img/Almassa-nasr-city.jpg');
+			background-size: cover;
+			background-position: center;
+			min-height: 85vh;
+			display: flex;
+			align-items: center;
+			position: relative;
+		}
+
+		.hover-scale {
+			transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+		}
+
+		.hover-scale:hover {
+			transform: translateY(-8px);
+			box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15) !important;
+		}
+
+		/* Style improvements for smooth scroll and custom scrollbar */
+		html {
+			scroll-behavior: smooth;
+		}
+
+		::-webkit-scrollbar {
+			width: 10px;
+		}
+
+		::-webkit-scrollbar-track {
+			background: var(--dark-obsidian);
+		}
+
+		::-webkit-scrollbar-thumb {
+			background: var(--gold-primary);
+			border-radius: 5px;
+		}
+
+		/* Text spacing and fine refinement */
+		.section-title {
+			position: relative;
+			padding-bottom: 15px;
+		}
+
+		.section-title::after {
+			content: '';
+			position: absolute;
+			bottom: 0;
+			left: 50%;
+			transform: translateX(-50%);
+			width: 60px;
+			height: 3px;
+			background: var(--gold-gradient);
+		}
+
+		.section-title-left::after {
+			left: 0;
+			transform: none;
+		}
+
+		.nav-link {
+			font-weight: 500 !important;
+			text-transform: uppercase;
+			font-size: 0.85rem !important;
+			letter-spacing: 1px;
+		}
+
+		.amenity-card {
+			border: 1px solid rgba(0, 0, 0, 0.05);
+			background-color: #ffffff;
+			transition: all 0.3s ease;
+		}
+
+		.amenity-card:hover {
+			border-color: var(--gold-primary);
+			transform: translateY(-5px);
+		}
+
+		.amenity-icon {
+			font-size: 2.5rem;
+			background: var(--gold-gradient);
+			-webkit-background-clip: text;
+			-webkit-text-fill-color: transparent;
+			margin-bottom: 15px;
+		}
+
+		.badge-gold {
+			background-color: rgba(212, 175, 55, 0.15) !important;
+			color: var(--gold-primary) !important;
+			font-weight: 600;
+			letter-spacing: 1px;
+			font-size: 0.75rem;
+			text-transform: uppercase;
+			border: 1px solid rgba(212, 175, 55, 0.3);
+		}
+
+		.vvip {
+			font-size: 40px !important;
+			top: 1px !important;
+		}

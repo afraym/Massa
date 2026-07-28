@@ -67,11 +67,25 @@
 		}
 
 		/* Variants: starting transform positions */
-		[data-animate="fade-up"]    { transform: translateY(40px); }
-		[data-animate="fade-left"]  { transform: translateX(-50px); }
-		[data-animate="fade-right"] { transform: translateX(50px); }
-		[data-animate="zoom-in"]    { transform: scale(0.88); }
-		[data-animate="fade-in"]    { transform: none; }
+		[data-animate="fade-up"] {
+			transform: translateY(40px);
+		}
+
+		[data-animate="fade-left"] {
+			transform: translateX(-50px);
+		}
+
+		[data-animate="fade-right"] {
+			transform: translateX(50px);
+		}
+
+		[data-animate="zoom-in"] {
+			transform: scale(0.88);
+		}
+
+		[data-animate="fade-in"] {
+			transform: none;
+		}
 
 		/* Visible state — triggered by JS observer */
 		[data-animate].is-visible {
@@ -80,18 +94,36 @@
 		}
 
 		/* Stagger delays for grid children */
-		[data-delay="100"] { transition-delay: 0.10s; }
-		[data-delay="200"] { transition-delay: 0.20s; }
-		[data-delay="300"] { transition-delay: 0.30s; }
-		[data-delay="400"] { transition-delay: 0.40s; }
-		[data-delay="500"] { transition-delay: 0.50s; }
-		[data-delay="600"] { transition-delay: 0.60s; }
+		[data-delay="100"] {
+			transition-delay: 0.10s;
+		}
+
+		[data-delay="200"] {
+			transition-delay: 0.20s;
+		}
+
+		[data-delay="300"] {
+			transition-delay: 0.30s;
+		}
+
+		[data-delay="400"] {
+			transition-delay: 0.40s;
+		}
+
+		[data-delay="500"] {
+			transition-delay: 0.50s;
+		}
+
+		[data-delay="600"] {
+			transition-delay: 0.60s;
+		}
 
 		/* Counter animation highlight */
 		.stat-number {
 			display: inline-block;
 			transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
 		}
+
 		.stat-number.pop {
 			transform: scale(1.25);
 		}
@@ -156,9 +188,12 @@
 		<div class="container position-relative z-index-2 py-6 py-md-8">
 			<div class="row justify-content-center text-center">
 				<div class="col-lg-8">
-					<span class="badge badge-gold px-3 py-2 mb-3" data-animate="fade-up" data-delay="100">5-Star Luxury in the Green Area of Nasr City</span>
-					<h1 class="text-white font-weight-bolder mb-3 display-4" data-animate="fade-up" data-delay="250">Cairo's Royal Oasis</h1>
-					<p class="text-white opacity-8 lead mb-5 px-lg-5" data-animate="fade-up" data-delay="400">Relax on our beautiful sun terrace, dine at 5 exquisite restaurants, and enjoy lavish rooms just steps from the Convention Centre. Your ultimate 5-star escape awaits.</p>
+					<span class="badge badge-gold px-3 py-2 mb-3" data-animate="fade-up" data-delay="100">5-Star Luxury · Nasr City, Cairo</span>
+					<h1 class="text-white font-weight-bolder mb-3 display-4" data-animate="fade-up" data-delay="250">
+						Cairo's Royal Oasis</h1>
+					<p class="text-white opacity-8 lead mb-5 px-lg-5" data-animate="fade-up" data-delay="400">Relax on
+						our beautiful sun terrace, dine at 5 exquisite restaurants, and enjoy lavish rooms just steps
+						from the Convention Centre. Your ultimate 5-star escape awaits.</p>
 				</div>
 			</div>
 
@@ -232,13 +267,21 @@
 		<div class="container">
 			<div class="row align-items-center">
 				<div class="col-lg-6 mb-5 mb-lg-0">
-					<span class="badge badge-gold px-3 py-2 mb-3" data-animate="fade-up" data-delay="100">The Diamond of Egypt</span>
-					<h2 class="font-weight-bolder mb-4 section-title section-title-left text-dark" data-animate="fade-up" data-delay="200">Palatial Grandeur
+					<span class="badge badge-gold px-3 py-2 mb-3" data-animate="fade-up" data-delay="100">The Diamond of
+						Egypt</span>
+					<h2 class="font-weight-bolder mb-4 section-title section-title-left text-dark"
+						data-animate="fade-up" data-delay="200">Palatial Grandeur
 						Meets Contemporary Luxury</h2>
-					<p class="text-secondary lead mb-4" data-animate="fade-up" data-delay="300">Discover the true meaning of luxury with <span
-							class="posterama">ALMASA</span>
-						Hotels & Resorts. As Egypt's leading 5-star hospitality brand, we live up to our name—"The Diamond"—by offering flawless experiences, breathtaking architecture, and impeccable service tailored just for you.</p>
-					<p class="text-secondary mb-4" data-animate="fade-up" data-delay="400">Whether you're exploring the lush green area of Nasr City, attending a prestigious event at Cairo's Convention Centre, or escaping to a breathtaking beachfront on the Red Sea, we redefine luxury. Enjoy our 5 diverse restaurants, private cinemas, and premium health clubs as we elevate every moment of your stay.</p>
+					<p class="text-secondary lead mb-4" data-animate="fade-up" data-delay="300">Discover the true
+						meaning of luxury with <span class="posterama">ALMASA</span>
+						Hotels & Resorts. As Egypt's leading 5-star hospitality brand, we live up to our name—"The
+						Diamond"—by offering flawless experiences, breathtaking architecture, and impeccable service
+						tailored just for you.</p>
+					<p class="text-secondary mb-4" data-animate="fade-up" data-delay="400">Whether you're exploring the
+						lush green area of Nasr City, attending a prestigious event at Cairo's Convention Centre, or
+						escaping to a breathtaking beachfront on the Red Sea, we redefine luxury. Enjoy our 5 diverse
+						restaurants, private cinemas, and premium health clubs as we elevate every moment of your stay.
+					</p>
 
 					<div class="row mt-4">
 						<div class="col-4" data-animate="zoom-in" data-delay="100">
@@ -283,9 +326,12 @@
 		<div class="container">
 			<div class="row justify-content-center text-center mb-6">
 				<div class="col-lg-8">
-					<span class="badge badge-gold px-3 py-2 mb-3" data-animate="fade-up" data-delay="100">Our Resorts Portfolio</span>
-					<h2 class="text-white font-weight-bolder mb-3 section-title" data-animate="fade-up" data-delay="200">Prestigious Egypt Destinations</h2>
-					<p class="text-muted lead" data-animate="fade-up" data-delay="300">From central Cairo palaces to spectacular beachfront coastlines, choose
+					<span class="badge badge-gold px-3 py-2 mb-3" data-animate="fade-up" data-delay="100">Our Resorts
+						Portfolio</span>
+					<h2 class="text-white font-weight-bolder mb-3 section-title" data-animate="fade-up"
+						data-delay="200">Prestigious Egypt Destinations</h2>
+					<p class="text-muted lead" data-animate="fade-up" data-delay="300">From central Cairo palaces to
+						spectacular beachfront coastlines, choose
 						the perfect setting for your luxury stay.</p>
 				</div>
 			</div>
@@ -312,9 +358,12 @@
 								</div>
 							</div>
 							<p class="text-gold font-weight-semibold mb-3 text-sm d-flex align-items-center">
-								<i class="material-symbols-rounded me-2 fs-5">location_on</i> The Green Area of Nasr City, Cairo
+								<i class="material-symbols-rounded me-2 fs-5">location_on</i> The Green Area of Nasr
+								City, Cairo
 							</p>
-							<p class="text-muted mb-4 text-sm">Our 5-star flagship property. Relax on our sun terrace by the pool, dine at one of our 5 exquisite restaurants, and enjoy stylish, air-conditioned rooms featuring private balconies, free Wi-Fi, and flat-screen TVs.</p>
+							<p class="text-muted mb-4 text-sm">Our 5-star flagship property. Relax on our sun terrace by
+								the pool, dine at one of our 5 exquisite restaurants, and enjoy stylish, air-conditioned
+								rooms featuring private balconies, free Wi-Fi, and flat-screen TVs.</p>
 							<hr class="horizontal light my-3">
 							<div class="d-flex justify-content-between align-items-center">
 								<div>
@@ -385,9 +434,12 @@
 		<div class="container">
 			<div class="row justify-content-center text-center mb-6">
 				<div class="col-lg-8">
-					<span class="badge badge-gold px-3 py-2 mb-3" data-animate="fade-up" data-delay="100">Impeccable Features</span>
-					<h2 class="font-weight-bolder mb-3 section-title text-dark" data-animate="fade-up" data-delay="200">Signature Experiences</h2>
-					<p class="text-secondary lead" data-animate="fade-up" data-delay="300">We deliver high-end lifestyle amenities tailored to create
+					<span class="badge badge-gold px-3 py-2 mb-3" data-animate="fade-up" data-delay="100">Impeccable
+						Features</span>
+					<h2 class="font-weight-bolder mb-3 section-title text-dark" data-animate="fade-up" data-delay="200">
+						Signature Experiences</h2>
+					<p class="text-secondary lead" data-animate="fade-up" data-delay="300">We deliver high-end lifestyle
+						amenities tailored to create
 						unforgettable corporate events and relaxing leisure vacations.</p>
 				</div>
 			</div>
@@ -408,7 +460,8 @@
 					<div class="card amenity-card p-4 h-100 text-center border-radius-xl shadow-none">
 						<i class="material-symbols-rounded amenity-icon">fitness_center</i>
 						<h5 class="font-weight-bold mb-2 text-dark font-heading">Health Club & Wellness</h5>
-						<p class="text-secondary text-sm mb-0">A peaceful sanctuary offering a state-of-the-art health club, hot steam baths, Finnish saunas, and total relaxation.</p>
+						<p class="text-secondary text-sm mb-0">A peaceful sanctuary offering a state-of-the-art health
+							club, hot steam baths, Finnish saunas, and total relaxation.</p>
 					</div>
 				</div>
 
@@ -427,7 +480,8 @@
 					<div class="card amenity-card p-4 h-100 text-center border-radius-xl shadow-none">
 						<i class="material-symbols-rounded amenity-icon">theater_comedy</i>
 						<h5 class="font-weight-bold mb-2 text-dark font-heading">Entertainment & Leisure</h5>
-						<p class="text-secondary text-sm mb-0">From multi-screen cinemas to lively bowling alleys and billiards, we ensure guests of all ages are endlessly entertained.</p>
+						<p class="text-secondary text-sm mb-0">From multi-screen cinemas to lively bowling alleys and
+							billiards, we ensure guests of all ages are endlessly entertained.</p>
 					</div>
 				</div>
 
@@ -459,9 +513,12 @@
 		<div class="container">
 			<div class="row justify-content-center text-center mb-6">
 				<div class="col-lg-8">
-					<span class="badge badge-gold px-3 py-2 mb-3" data-animate="fade-up" data-delay="100">Exclusive Packages</span>
-					<h2 class="text-white font-weight-bolder mb-3 section-title" data-animate="fade-up" data-delay="200">Curated Guest Packages</h2>
-					<p class="text-muted lead" data-animate="fade-up" data-delay="300">Choose from our selected offers to enjoy customized perks, dinner
+					<span class="badge badge-gold px-3 py-2 mb-3" data-animate="fade-up" data-delay="100">Exclusive
+						Packages</span>
+					<h2 class="text-white font-weight-bolder mb-3 section-title" data-animate="fade-up"
+						data-delay="200">Curated Guest Packages</h2>
+					<p class="text-muted lead" data-animate="fade-up" data-delay="300">Choose from our selected offers
+						to enjoy customized perks, dinner
 						vouchers, and wellness discounts.</p>
 				</div>
 			</div>
@@ -548,9 +605,12 @@
 		<div class="container">
 			<div class="row justify-content-center text-center mb-6">
 				<div class="col-lg-8">
-					<span class="badge badge-gold px-3 py-2 mb-3" data-animate="fade-up" data-delay="100">Guest Experience</span>
-					<h2 class="font-weight-bolder mb-3 section-title text-dark" data-animate="fade-up" data-delay="200">What Our Guests Say</h2>
-					<p class="text-secondary lead" data-animate="fade-up" data-delay="300">Read feedback from business executives, diplomats, and vacationers
+					<span class="badge badge-gold px-3 py-2 mb-3" data-animate="fade-up" data-delay="100">Guest
+						Experience</span>
+					<h2 class="font-weight-bolder mb-3 section-title text-dark" data-animate="fade-up" data-delay="200">
+						What Our Guests Say</h2>
+					<p class="text-secondary lead" data-animate="fade-up" data-delay="300">Read feedback from business
+						executives, diplomats, and vacationers
 						who experienced <span class="posterama">ALMASA</span> luxury.</p>
 				</div>
 			</div>
@@ -575,7 +635,10 @@
 							<i class="fas fa-star"></i>
 							<i class="fas fa-star"></i>
 						</div>
-						<p class="text-secondary text-sm mb-0">"We hosted a 500-guest event near the Cairo International Convention Centre. Almasa Nasr City's stunning outdoor pools, banquet dining service, and flawless security were exceptional. The free Wi-Fi and elegant rooms with balconies made our guests' stay perfect."</p>
+						<p class="text-secondary text-sm mb-0">"We hosted a 500-guest event near the Cairo International
+							Convention Centre. Almasa Nasr City's stunning outdoor pools, banquet dining service, and
+							flawless security were exceptional. The free Wi-Fi and elegant rooms with balconies made our
+							guests' stay perfect."</p>
 					</div>
 				</div>
 
@@ -640,9 +703,12 @@
 		<div class="container">
 			<div class="row align-items-center">
 				<div class="col-lg-5 mb-5 mb-lg-0">
-					<span class="badge badge-gold px-3 py-2 mb-3" data-animate="fade-up" data-delay="100">Reservations Desk</span>
-					<h2 class="text-white font-weight-bolder mb-4 font-heading" data-animate="fade-up" data-delay="200">Plan Your Ultimate Egypt Getaway</h2>
-					<p class="text-muted mb-5" data-animate="fade-up" data-delay="300">Need help setting up corporate summit itineraries, booking wedding halls,
+					<span class="badge badge-gold px-3 py-2 mb-3" data-animate="fade-up" data-delay="100">Reservations
+						Desk</span>
+					<h2 class="text-white font-weight-bolder mb-4 font-heading" data-animate="fade-up" data-delay="200">
+						Plan Your Ultimate Egypt Getaway</h2>
+					<p class="text-muted mb-5" data-animate="fade-up" data-delay="300">Need help setting up corporate
+						summit itineraries, booking wedding halls,
 						or planning a relaxing weekend getaway? Reach out directly to our luxury support team.</p>
 
 					<div class="d-flex align-items-center mb-4" data-animate="fade-left" data-delay="350">

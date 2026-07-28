@@ -55,6 +55,46 @@
 		.posterama {
 			font-family: Posterama-Bold;
 		}
+
+		/* =============================================
+		   SCROLL-REVEAL ANIMATION SYSTEM
+		   ============================================= */
+
+		/* Base hidden state — elements start invisible */
+		[data-animate] {
+			opacity: 0;
+			transition: opacity 0.7s ease, transform 0.7s ease;
+		}
+
+		/* Variants: starting transform positions */
+		[data-animate="fade-up"]    { transform: translateY(40px); }
+		[data-animate="fade-left"]  { transform: translateX(-50px); }
+		[data-animate="fade-right"] { transform: translateX(50px); }
+		[data-animate="zoom-in"]    { transform: scale(0.88); }
+		[data-animate="fade-in"]    { transform: none; }
+
+		/* Visible state — triggered by JS observer */
+		[data-animate].is-visible {
+			opacity: 1;
+			transform: none !important;
+		}
+
+		/* Stagger delays for grid children */
+		[data-delay="100"] { transition-delay: 0.10s; }
+		[data-delay="200"] { transition-delay: 0.20s; }
+		[data-delay="300"] { transition-delay: 0.30s; }
+		[data-delay="400"] { transition-delay: 0.40s; }
+		[data-delay="500"] { transition-delay: 0.50s; }
+		[data-delay="600"] { transition-delay: 0.60s; }
+
+		/* Counter animation highlight */
+		.stat-number {
+			display: inline-block;
+			transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+		}
+		.stat-number.pop {
+			transform: scale(1.25);
+		}
 	</style>
 </head>
 
@@ -116,9 +156,9 @@
 		<div class="container position-relative z-index-2 py-6 py-md-8">
 			<div class="row justify-content-center text-center">
 				<div class="col-lg-8">
-					<span class="badge badge-gold px-3 py-2 mb-3">5-Star Luxury in the Green Area of Nasr City</span>
-					<h1 class="text-white font-weight-bolder mb-3 display-4">Cairo's Royal Oasis</h1>
-					<p class="text-white opacity-8 lead mb-5 px-lg-5">Relax on our beautiful sun terrace, dine at 5 exquisite restaurants, and enjoy lavish rooms just steps from the Convention Centre. Your ultimate 5-star escape awaits.</p>
+					<span class="badge badge-gold px-3 py-2 mb-3" data-animate="fade-up" data-delay="100">5-Star Luxury in the Green Area of Nasr City</span>
+					<h1 class="text-white font-weight-bolder mb-3 display-4" data-animate="fade-up" data-delay="250">Cairo's Royal Oasis</h1>
+					<p class="text-white opacity-8 lead mb-5 px-lg-5" data-animate="fade-up" data-delay="400">Relax on our beautiful sun terrace, dine at 5 exquisite restaurants, and enjoy lavish rooms just steps from the Convention Centre. Your ultimate 5-star escape awaits.</p>
 				</div>
 			</div>
 
@@ -192,30 +232,30 @@
 		<div class="container">
 			<div class="row align-items-center">
 				<div class="col-lg-6 mb-5 mb-lg-0">
-					<span class="badge badge-gold px-3 py-2 mb-3">The Diamond of Egypt</span>
-					<h2 class="font-weight-bolder mb-4 section-title section-title-left text-dark">Palatial Grandeur
+					<span class="badge badge-gold px-3 py-2 mb-3" data-animate="fade-up" data-delay="100">The Diamond of Egypt</span>
+					<h2 class="font-weight-bolder mb-4 section-title section-title-left text-dark" data-animate="fade-up" data-delay="200">Palatial Grandeur
 						Meets Contemporary Luxury</h2>
-					<p class="text-secondary lead mb-4">Discover the true meaning of luxury with <span
+					<p class="text-secondary lead mb-4" data-animate="fade-up" data-delay="300">Discover the true meaning of luxury with <span
 							class="posterama">ALMASA</span>
 						Hotels & Resorts. As Egypt's leading 5-star hospitality brand, we live up to our name—"The Diamond"—by offering flawless experiences, breathtaking architecture, and impeccable service tailored just for you.</p>
-					<p class="text-secondary mb-4">Whether you're exploring the lush green area of Nasr City, attending a prestigious event at Cairo's Convention Centre, or escaping to a breathtaking beachfront on the Red Sea, we redefine luxury. Enjoy our 5 diverse restaurants, private cinemas, and premium health clubs as we elevate every moment of your stay.</p>
+					<p class="text-secondary mb-4" data-animate="fade-up" data-delay="400">Whether you're exploring the lush green area of Nasr City, attending a prestigious event at Cairo's Convention Centre, or escaping to a breathtaking beachfront on the Red Sea, we redefine luxury. Enjoy our 5 diverse restaurants, private cinemas, and premium health clubs as we elevate every moment of your stay.</p>
 
 					<div class="row mt-4">
-						<div class="col-4">
-							<h3 class="text-gold font-weight-bold mb-0">5-Star</h3>
+						<div class="col-4" data-animate="zoom-in" data-delay="100">
+							<h3 class="text-gold font-weight-bold mb-0 stat-number">5-Star</h3>
 							<p class="text-xs text-uppercase font-weight-bold text-secondary">Service Standard</p>
 						</div>
-						<div class="col-4">
-							<h3 class="text-gold font-weight-bold mb-0">2</h3>
+						<div class="col-4" data-animate="zoom-in" data-delay="250">
+							<h3 class="text-gold font-weight-bold mb-0 stat-number">2</h3>
 							<p class="text-xs text-uppercase font-weight-bold text-secondary">Iconic Destinations</p>
 						</div>
-						<div class="col-4">
-							<h3 class="text-gold font-weight-bold mb-0">100%</h3>
+						<div class="col-4" data-animate="zoom-in" data-delay="400">
+							<h3 class="text-gold font-weight-bold mb-0 stat-number">100%</h3>
 							<p class="text-xs text-uppercase font-weight-bold text-secondary">Egyptian Elegance</p>
 						</div>
 					</div>
 				</div>
-				<div class="col-lg-6 px-lg-5">
+				<div class="col-lg-6 px-lg-5" data-animate="fade-right" data-delay="200">
 					<div class="position-relative">
 						<div class="blur-shadow-image">
 							<img src="./assets/img/luxury1.jpg" alt="ALMASA Culinary Experience"
@@ -243,16 +283,16 @@
 		<div class="container">
 			<div class="row justify-content-center text-center mb-6">
 				<div class="col-lg-8">
-					<span class="badge badge-gold px-3 py-2 mb-3">Our Resorts Portfolio</span>
-					<h2 class="text-white font-weight-bolder mb-3 section-title">Prestigious Egypt Destinations</h2>
-					<p class="text-muted lead">From central Cairo palaces to spectacular beachfront coastlines, choose
+					<span class="badge badge-gold px-3 py-2 mb-3" data-animate="fade-up" data-delay="100">Our Resorts Portfolio</span>
+					<h2 class="text-white font-weight-bolder mb-3 section-title" data-animate="fade-up" data-delay="200">Prestigious Egypt Destinations</h2>
+					<p class="text-muted lead" data-animate="fade-up" data-delay="300">From central Cairo palaces to spectacular beachfront coastlines, choose
 						the perfect setting for your luxury stay.</p>
 				</div>
 			</div>
 
 			<div class="row g-4">
 				<!-- Destination 1 -->
-				<div class="col-lg-6 col-md-12" id="dest-cairo">
+				<div class="col-lg-6 col-md-12" id="dest-cairo" data-animate="fade-left" data-delay="100">
 					<div class="card bg-dark-card border-gold border-radius-xl hover-scale h-100">
 						<div class="position-relative">
 							<img src="./assets/img/front.jpg" class="card-img-top border-radius-xl p-3"
@@ -292,7 +332,7 @@
 				</div>
 
 				<!-- Destination 2 -->
-				<div class="col-lg-6 col-md-12" id="dest-sokhna">
+				<div class="col-lg-6 col-md-12" id="dest-sokhna" data-animate="fade-right" data-delay="250">
 					<div class="card bg-dark-card border-gold border-radius-xl hover-scale h-100">
 						<div class="position-relative">
 							<img src="./assets/img/sokhna.jpg" class="card-img-top border-radius-xl p-3"
@@ -345,16 +385,16 @@
 		<div class="container">
 			<div class="row justify-content-center text-center mb-6">
 				<div class="col-lg-8">
-					<span class="badge badge-gold px-3 py-2 mb-3">Impeccable Features</span>
-					<h2 class="font-weight-bolder mb-3 section-title text-dark">Signature Experiences</h2>
-					<p class="text-secondary lead">We deliver high-end lifestyle amenities tailored to create
+					<span class="badge badge-gold px-3 py-2 mb-3" data-animate="fade-up" data-delay="100">Impeccable Features</span>
+					<h2 class="font-weight-bolder mb-3 section-title text-dark" data-animate="fade-up" data-delay="200">Signature Experiences</h2>
+					<p class="text-secondary lead" data-animate="fade-up" data-delay="300">We deliver high-end lifestyle amenities tailored to create
 						unforgettable corporate events and relaxing leisure vacations.</p>
 				</div>
 			</div>
 
 			<div class="row g-4">
 				<!-- Amenity 1 -->
-				<div class="col-lg-4 col-md-6">
+				<div class="col-lg-4 col-md-6" data-animate="fade-up" data-delay="100">
 					<div class="card amenity-card p-4 h-100 text-center border-radius-xl shadow-none">
 						<i class="material-symbols-rounded amenity-icon">meeting_room</i>
 						<h5 class="font-weight-bold mb-2 text-dark font-heading">Conventions & Ballrooms</h5>
@@ -364,7 +404,7 @@
 				</div>
 
 				<!-- Amenity 2 -->
-				<div class="col-lg-4 col-md-6">
+				<div class="col-lg-4 col-md-6" data-animate="fade-up" data-delay="200">
 					<div class="card amenity-card p-4 h-100 text-center border-radius-xl shadow-none">
 						<i class="material-symbols-rounded amenity-icon">fitness_center</i>
 						<h5 class="font-weight-bold mb-2 text-dark font-heading">Health Club & Wellness</h5>
@@ -373,7 +413,7 @@
 				</div>
 
 				<!-- Amenity 3 -->
-				<div class="col-lg-4 col-md-6">
+				<div class="col-lg-4 col-md-6" data-animate="fade-up" data-delay="300">
 					<div class="card amenity-card p-4 h-100 text-center border-radius-xl shadow-none">
 						<i class="material-symbols-rounded amenity-icon">pool</i>
 						<h5 class="font-weight-bold mb-2 text-dark font-heading">Pools & Beach Clubs</h5>
@@ -383,7 +423,7 @@
 				</div>
 
 				<!-- Amenity 4 -->
-				<div class="col-lg-4 col-md-6">
+				<div class="col-lg-4 col-md-6" data-animate="fade-up" data-delay="100">
 					<div class="card amenity-card p-4 h-100 text-center border-radius-xl shadow-none">
 						<i class="material-symbols-rounded amenity-icon">theater_comedy</i>
 						<h5 class="font-weight-bold mb-2 text-dark font-heading">Entertainment & Leisure</h5>
@@ -392,7 +432,7 @@
 				</div>
 
 				<!-- Amenity 5 -->
-				<div class="col-lg-4 col-md-6">
+				<div class="col-lg-4 col-md-6" data-animate="fade-up" data-delay="200">
 					<div class="card amenity-card p-4 h-100 text-center border-radius-xl shadow-none">
 						<i class="material-symbols-rounded amenity-icon">restaurant</i>
 						<h5 class="font-weight-bold mb-2 text-dark font-heading">Fine Culinary Dining</h5>
@@ -402,7 +442,7 @@
 				</div>
 
 				<!-- Amenity 6 -->
-				<div class="col-lg-4 col-md-6">
+				<div class="col-lg-4 col-md-6" data-animate="fade-up" data-delay="300">
 					<div class="card amenity-card p-4 h-100 text-center border-radius-xl shadow-none">
 						<i class="material-symbols-rounded amenity-icon">flight_takeoff</i>
 						<h5 class="font-weight-bold mb-2 text-dark font-heading">VIP Airport Transfer</h5>
@@ -419,16 +459,16 @@
 		<div class="container">
 			<div class="row justify-content-center text-center mb-6">
 				<div class="col-lg-8">
-					<span class="badge badge-gold px-3 py-2 mb-3">Exclusive Packages</span>
-					<h2 class="text-white font-weight-bolder mb-3 section-title">Curated Guest Packages</h2>
-					<p class="text-muted lead">Choose from our selected offers to enjoy customized perks, dinner
+					<span class="badge badge-gold px-3 py-2 mb-3" data-animate="fade-up" data-delay="100">Exclusive Packages</span>
+					<h2 class="text-white font-weight-bolder mb-3 section-title" data-animate="fade-up" data-delay="200">Curated Guest Packages</h2>
+					<p class="text-muted lead" data-animate="fade-up" data-delay="300">Choose from our selected offers to enjoy customized perks, dinner
 						vouchers, and wellness discounts.</p>
 				</div>
 			</div>
 
 			<div class="row g-4">
 				<!-- Package 1 -->
-				<div class="col-lg-4 col-md-6">
+				<div class="col-lg-4 col-md-6" data-animate="zoom-in" data-delay="100">
 					<div
 						class="card bg-dark-card border border-light opacity-8 border-radius-xl p-4 h-100 d-flex flex-column justify-content-between hover-scale">
 						<div>
@@ -451,7 +491,7 @@
 				</div>
 
 				<!-- Package 2 -->
-				<div class="col-lg-4 col-md-6">
+				<div class="col-lg-4 col-md-6" data-animate="zoom-in" data-delay="250">
 					<div
 						class="card bg-dark-card border-gold border-radius-xl p-4 h-100 d-flex flex-column justify-content-between hover-scale">
 						<div>
@@ -478,7 +518,7 @@
 				</div>
 
 				<!-- Package 3 -->
-				<div class="col-lg-4 col-md-6 mx-auto">
+				<div class="col-lg-4 col-md-6 mx-auto" data-animate="zoom-in" data-delay="400">
 					<div
 						class="card bg-dark-card border border-light opacity-8 border-radius-xl p-4 h-100 d-flex flex-column justify-content-between hover-scale">
 						<div>
@@ -508,16 +548,16 @@
 		<div class="container">
 			<div class="row justify-content-center text-center mb-6">
 				<div class="col-lg-8">
-					<span class="badge badge-gold px-3 py-2 mb-3">Guest Experience</span>
-					<h2 class="font-weight-bolder mb-3 section-title text-dark">What Our Guests Say</h2>
-					<p class="text-secondary lead">Read feedback from business executives, diplomats, and vacationers
+					<span class="badge badge-gold px-3 py-2 mb-3" data-animate="fade-up" data-delay="100">Guest Experience</span>
+					<h2 class="font-weight-bolder mb-3 section-title text-dark" data-animate="fade-up" data-delay="200">What Our Guests Say</h2>
+					<p class="text-secondary lead" data-animate="fade-up" data-delay="300">Read feedback from business executives, diplomats, and vacationers
 						who experienced <span class="posterama">ALMASA</span> luxury.</p>
 				</div>
 			</div>
 
 			<div class="row g-4">
 				<!-- Testimonial 1 -->
-				<div class="col-lg-4 col-md-6">
+				<div class="col-lg-4 col-md-6" data-animate="fade-up" data-delay="100">
 					<div class="card card-plain p-4 h-100 border border-light border-radius-xl">
 						<div class="d-flex align-items-center mb-3">
 							<div class="avatar avatar-lg me-3">
@@ -540,7 +580,7 @@
 				</div>
 
 				<!-- Testimonial 2 -->
-				<div class="col-lg-4 col-md-6">
+				<div class="col-lg-4 col-md-6" data-animate="fade-up" data-delay="250">
 					<div class="card card-plain p-4 h-100 border border-light border-radius-xl">
 						<div class="d-flex align-items-center mb-3">
 							<div class="avatar avatar-lg me-3">
@@ -566,7 +606,7 @@
 				</div>
 
 				<!-- Testimonial 3 -->
-				<div class="col-lg-4 col-md-6 mx-auto">
+				<div class="col-lg-4 col-md-6 mx-auto" data-animate="fade-up" data-delay="400">
 					<div class="card card-plain p-4 h-100 border border-light border-radius-xl">
 						<div class="d-flex align-items-center mb-3">
 							<div class="avatar avatar-lg me-3">
@@ -600,12 +640,12 @@
 		<div class="container">
 			<div class="row align-items-center">
 				<div class="col-lg-5 mb-5 mb-lg-0">
-					<span class="badge badge-gold px-3 py-2 mb-3">Reservations Desk</span>
-					<h2 class="text-white font-weight-bolder mb-4 font-heading">Plan Your Ultimate Egypt Getaway</h2>
-					<p class="text-muted mb-5">Need help setting up corporate summit itineraries, booking wedding halls,
+					<span class="badge badge-gold px-3 py-2 mb-3" data-animate="fade-up" data-delay="100">Reservations Desk</span>
+					<h2 class="text-white font-weight-bolder mb-4 font-heading" data-animate="fade-up" data-delay="200">Plan Your Ultimate Egypt Getaway</h2>
+					<p class="text-muted mb-5" data-animate="fade-up" data-delay="300">Need help setting up corporate summit itineraries, booking wedding halls,
 						or planning a relaxing weekend getaway? Reach out directly to our luxury support team.</p>
 
-					<div class="d-flex align-items-center mb-4">
+					<div class="d-flex align-items-center mb-4" data-animate="fade-left" data-delay="350">
 						<div class="icon icon-shape bg-gold text-dark p-3 border-radius-md me-3 d-flex align-items-center justify-content-center"
 							style="width: 50px; height: 50px;">
 							<i class="material-symbols-rounded fs-4 text-dark">call</i>
@@ -616,7 +656,7 @@
 						</div>
 					</div>
 
-					<div class="d-flex align-items-center mb-4">
+					<div class="d-flex align-items-center mb-4" data-animate="fade-left" data-delay="450">
 						<div class="icon icon-shape bg-gold text-dark p-3 border-radius-md me-3 d-flex align-items-center justify-content-center"
 							style="width: 50px; height: 50px;">
 							<i class="material-symbols-rounded fs-4 text-dark">mail</i>
@@ -627,7 +667,7 @@
 						</div>
 					</div>
 
-					<div class="d-flex align-items-center">
+					<div class="d-flex align-items-center" data-animate="fade-left" data-delay="550">
 						<div class="icon icon-shape bg-gold text-dark p-3 border-radius-md me-3 d-flex align-items-center justify-content-center"
 							style="width: 50px; height: 50px;">
 							<i class="material-symbols-rounded fs-4 text-dark">location_on</i>
@@ -639,7 +679,7 @@
 					</div>
 				</div>
 
-				<div class="col-lg-6 ms-auto">
+				<div class="col-lg-6 ms-auto" data-animate="fade-right" data-delay="200">
 					<div class="card bg-dark-card border-gold p-4 border-radius-xl">
 						<h4 class="text-white mb-4 font-heading font-weight-bold text-center text-lg-start">Direct
 							Inquiry Form</h4>
@@ -868,6 +908,47 @@
 					video.currentTime = 0;
 				});
 			}
+		})();
+
+		// =============================================
+		// SCROLL-REVEAL ANIMATION (IntersectionObserver)
+		// =============================================
+		(function () {
+			// Immediately reveal hero elements (they are above the fold)
+			document.querySelectorAll('#hero [data-animate]').forEach(function (el) {
+				setTimeout(function () { el.classList.add('is-visible'); },
+					parseInt(el.dataset.delay || 0));
+			});
+
+			// Observe all other [data-animate] elements
+			const observer = new IntersectionObserver(function (entries) {
+				entries.forEach(function (entry) {
+					if (entry.isIntersecting) {
+						const el = entry.target;
+						const delay = parseInt(el.dataset.delay || 0);
+						setTimeout(function () {
+							el.classList.add('is-visible');
+							// Pop stat numbers
+							const stat = el.querySelector('.stat-number');
+							if (stat) {
+								stat.classList.add('pop');
+								setTimeout(function () { stat.classList.remove('pop'); }, 400);
+							}
+						}, delay);
+						observer.unobserve(el);
+					}
+				});
+			}, {
+				threshold: 0.12,
+				rootMargin: '0px 0px -40px 0px'
+			});
+
+			document.querySelectorAll('[data-animate]').forEach(function (el) {
+				// Skip hero elements — already handled above
+				if (!el.closest('#hero')) {
+					observer.observe(el);
+				}
+			});
 		})();
 	</script>
 	<!-- <script defer
